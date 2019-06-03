@@ -1,0 +1,2 @@
+# preact-cli-template
+ぼくのかんがえたさいきょうのPreactテンプレ
