@@ -1,0 +1,7 @@
+{
+  "entry": ["src/index"],
+  "plugins": [],
+  "babel": {
+    "jsx": "preact"
+  }
+}

@@ -2,12 +2,18 @@
   "name": "name",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "poi --serve",
+    "build": "poi --prod",
+    "lint": "eslint ."
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
+    "poi": "^12.6.10",
     "prettier": "^1.17.1",
     "typescript": "^3.5.1"
   }
