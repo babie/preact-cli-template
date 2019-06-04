@@ -61,4 +61,5 @@ typings/
 .next
 
 # Application
+package-lock.json
 yarn.lock
