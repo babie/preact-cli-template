@@ -9,6 +9,9 @@
     "sizecheck": "poi --prod --source-map --out-dir .poi && source-map-explorer .poi/assets/js/*.chunk.js --html source-map-explorer.html",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
   },
+  "dependencies": {
+    "preact": "^10.0.0-beta.2"
+  },
   "devDependencies": {
     "@types/node": "^12.0.4",
     "@types/webpack-env": "^1.13.9",
@@ -22,8 +25,5 @@
     "prettier": "^1.17.1",
     "source-map-explorer": "^2.0.0",
     "typescript": ">=3.4.5 <3.5.0"
-  },
-  "dependencies": {
-    "preact": "^10.0.0-beta.2"
   }
 }
