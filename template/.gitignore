@@ -62,3 +62,5 @@ typings/
 
 # Application
 dist/
+.poi/
+source-map-explorer.html
