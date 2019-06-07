@@ -26,8 +26,6 @@
   },
   "settings": {
     "react": {
-      "createClass": "preact",
-      "pragma": "h",
       "version": "16.8"
     }
   }

@@ -2,6 +2,6 @@
   "entry": ["src/index"],
   "plugins": [],
   "babel": {
-    "jsx": "preact"
+    "jsx": "react"
   }
 }
