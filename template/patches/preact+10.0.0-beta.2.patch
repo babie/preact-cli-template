@@ -1,0 +1,12 @@
+diff --git a/node_modules/preact/compat/src/index.d.ts b/node_modules/preact/compat/src/index.d.ts
+index bdc044f..6314d96 100644
+--- a/node_modules/preact/compat/src/index.d.ts
++++ b/node_modules/preact/compat/src/index.d.ts
+@@ -11,6 +11,7 @@ export import createRef = preact.createRef;
+ export import Fragment = preact.Fragment;
+ export import createElement = preact.createElement
+ export import cloneElement = preact.cloneElement
++export import JSX = preact.JSX
+ 
+ export declare const version: string;
+ 

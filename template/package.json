@@ -7,7 +7,8 @@
     "build": "poi --prod",
     "typecheck": "tsc --noEmit",
     "sizecheck": "poi --prod --source-map --out-dir .poi && source-map-explorer .poi/assets/js/*.chunk.js --html source-map-explorer.html",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "preact": "^10.0.0-beta.2"
@@ -22,6 +23,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
+    "patch-package": "^6.1.2",
     "poi": "^12.6.10",
     "prettier": "^1.17.1",
     "source-map-explorer": "^2.0.0",
