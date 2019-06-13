@@ -11,6 +11,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "preact": "^10.0.0-beta.2"
   },
   "devDependencies": {
@@ -23,7 +24,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
-    "normalize.css": "^8.0.1",
     "patch-package": "^6.1.2",
     "poi": "^12.6.10",
     "prettier": "^1.17.1",
