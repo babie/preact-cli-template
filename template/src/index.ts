@@ -1,5 +1,6 @@
 import { render } from 'react-dom'
 import { App } from './App'
+import 'normalize.css'
 import './assets/css/style.css'
 
 if (module.hot) {
