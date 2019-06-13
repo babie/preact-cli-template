@@ -26,6 +26,7 @@
     "eslint-plugin-react": "^7.13.0",
     "patch-package": "^6.1.2",
     "poi": "^12.6.10",
+    "postcss-preset-env": "^6.6.0",
     "prettier": "^1.17.1",
     "source-map-explorer": "^2.0.0",
     "typescript": ">=3.4.5 <3.5.0"
