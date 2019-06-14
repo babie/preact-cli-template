@@ -1,8 +1,11 @@
 import * as React from 'react'
+import { Router } from 'preact-router'
+
+import { Home, About } from './components'
 
 export const App = (
-  <>
-    <h1 className="title">Hello, Preact!</h1>
-    <div className="tip">Edit src/index.tsx and save to reload.</div>
-  </>
+  <Router>
+    <Home path="/" />
+    <About path="/about" />
+  </Router>
 )
