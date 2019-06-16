@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'preact-router'
+import Head from 'preact-head'
 
 interface Props {
   path: string
@@ -7,6 +8,9 @@ interface Props {
 
 export const Home = (_props: Props): React.JSX.Element => (
   <>
+    <Head>
+      <title>Home</title>
+    </Head>
     <h1 className="title">Hello, Preact!</h1>
     <div className="tip">Edit src/components/Home.tsx and save to reload.</div>
     <Link href="/about">to about</Link>

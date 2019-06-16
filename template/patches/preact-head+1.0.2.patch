@@ -1,0 +1,65 @@
+diff --git a/node_modules/preact-head/index.js b/node_modules/preact-head/index.js
+index 7a1423f..72d76f4 100644
+--- a/node_modules/preact-head/index.js
++++ b/node_modules/preact-head/index.js
+@@ -28,9 +28,9 @@ function reducer(components) {
+ function updateClient (head) {
+   const tags = {}
+   head.forEach((h) => {
+-    const components = tags[h.nodeName] || []
++    const components = tags[h.type] || []
+     components.push(h)
+-    tags[h.nodeName] = components
++    tags[h.type] = components
+   })
+ 
+   updateTitle(tags.title ? tags.title[0] : null)
+@@ -60,9 +60,9 @@ function updateElements (type, components) {
+ }
+ 
+ function domify (component) {
+-  const el = document.createElement(component.nodeName)
+-  const attrs = component.attributes || {}
+-  const children = component.children
++  const el = document.createElement(component.type)
++  const attrs = component.props || {}
++  const children = component.props.children
+   
+   for (const p in attrs) {
+     if (!attrs.hasOwnProperty(p)) continue
+@@ -90,21 +90,21 @@ function unique () {
+   const metaTypes = []
+   const metaCategories = {}
+   return (h) => {
+-    switch (h.nodeName) {
++    switch (h.type) {
+       case 'title':
+       case 'base':
+-        if (~tags.indexOf(h.nodeName)) return false
+-        tags.push(h.nodeName)
++        if (~tags.indexOf(h.type)) return false
++        tags.push(h.type)
+         break
+       case 'meta':
+         for (let i = 0, len = METATYPES.length; i < len; i++) {
+           const metatype = METATYPES[i]
+-          if (!h.attributes.hasOwnProperty(metatype)) continue
++          if (!h.props.hasOwnProperty(metatype)) continue
+           if (metatype === 'charSet') {
+             if (~metaTypes.indexOf(metatype)) return false
+             metaTypes.push(metatype)
+           } else {
+-            const category = h.attributes[metatype]
++            const category = h.props[metatype]
+             const categories = metaCategories[metatype] || []
+             if (~categories.indexOf(category)) return false
+             categories.push(category)
+@@ -120,7 +120,7 @@ function unique () {
+ function updateTitle (component) {
+   let title
+     if (component) {
+-      const { children } = component
++      const { props: { children } } = component
+       title = typeof children === 'string' ? children : children.join('')
+     } else {
+       title = ''
