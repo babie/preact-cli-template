@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "normalize.css": "^8.0.1",
     "preact": "^10.0.0-beta.2",
-    "preact-head": "^1.0.2",
+    "preact-head": "babie/preact-head#dev",
     "preact-render-to-string": "^4.1.0",
     "preact-router": "^3.0.0"
   },
@@ -25,6 +25,7 @@
     "@types/node": "^12.0.4",
     "@types/webpack-env": "^1.13.9",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
