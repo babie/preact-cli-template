@@ -13,3 +13,26 @@ body {
 .tip {
   font-size: 1.4rem;
 }
+
+a:link {
+  color: plum;
+}
+
+a:visited {
+  color: plum;
+}
+
+a:hover {
+  color: #333;
+  background-color: gold;
+}
+
+a:active {
+  color: #333;
+  background-color: aqua;
+}
+
+a:focus {
+  color: #333;
+  background-color: gold;
+}
