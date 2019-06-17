@@ -36,3 +36,16 @@ a:focus {
   color: #333;
   background-color: gold;
 }
+
+img.face {
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  justify-content: space-around;
+  align-items: center;
+}

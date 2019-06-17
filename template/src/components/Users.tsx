@@ -28,8 +28,9 @@ interface UserProps {
 
 const User = ({ user }: UserProps): React.JSX.Element => {
   return (
-    <div>
+    <div className="user">
       <img
+        className="face"
         src={user.picture.large}
         alt={`${user.name.first} ${user.name.last}'s face`}
       />
@@ -67,11 +68,13 @@ export const Users = (_props: Props): React.JSX.Element => {
       <Head>
         <title>Users</title>
       </Head>
-      {users.map(
-        (user): React.JSX.Element => (
-          <User key={user.id.value} user={user} />
-        )
-      )}
+      <div className="container">
+        {users.map(
+          (user): React.JSX.Element => (
+            <User key={user.id.value} user={user} />
+          )
+        )}
+      </div>
       <div>
         <Link href="/">back to home</Link>
       </div>
