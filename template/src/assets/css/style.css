@@ -37,15 +37,20 @@ a:focus {
   background-color: gold;
 }
 
-img.face {
-  border-radius: 50%;
+ul.user-list {
+  padding-inline: 0 0;
+  margin-block: 0 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 90vh;
-  justify-content: space-around;
-  align-items: center;
+li.user-item {
+  list-style-type: none;
+  margin-bottom: 48px;
+}
+
+li.user-item:first-child {
+  margin-top: 48px;
+}
+
+img.user-face {
+  border-radius: 50%;
 }

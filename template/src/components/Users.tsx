@@ -28,25 +28,21 @@ interface UserProps {
 
 const User = ({ user }: UserProps): React.JSX.Element => {
   return (
-    <div className="user">
+    <li className="user-item">
       <img
-        className="face"
+        className="user-face"
         src={user.picture.large}
         alt={`${user.name.first} ${user.name.last}'s face`}
       />
       <p>
         {user.name.first} {user.name.last}
       </p>
-    </div>
+    </li>
   )
 }
 
-interface Props {
-  path: string
-}
-
-export const Users = (_props: Props): React.JSX.Element => {
-  const [users, setUsers] = React.useState<UserData[]>([])
+const useFetchUsers = (initialValue: UserData[]): UserData[] => {
+  const [users, setUsers] = React.useState<UserData[]>(initialValue)
   React.useEffect((): void => {
     fetch('https://randomuser.me/api/?results=3')
       .then(
@@ -63,21 +59,30 @@ export const Users = (_props: Props): React.JSX.Element => {
       .catch((err): void => console.error(err))
   }, [true])
 
+  return users
+}
+
+interface Props {
+  path: string
+}
+
+export const Users = (_props: Props): React.JSX.Element => {
+  const users = useFetchUsers([])
   return (
     <>
       <Head>
         <title>Users</title>
       </Head>
-      <div className="container">
+      <ul className="user-list">
         {users.map(
           (user): React.JSX.Element => (
             <User key={user.id.value} user={user} />
           )
         )}
-      </div>
-      <div>
+      </ul>
+      <p>
         <Link href="/">back to home</Link>
-      </div>
+      </p>
     </>
   )
 }
