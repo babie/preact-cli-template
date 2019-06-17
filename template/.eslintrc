@@ -24,6 +24,7 @@
   "plugins": ["@typescript-eslint", "react", "jsx-a11y", "jest", "prettier"],
   "rules": {
     "prettier/prettier": "error",
+    "no-console": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   },
   "settings": {

@@ -13,6 +13,11 @@ export const Home = (_props: Props): React.JSX.Element => (
     </Head>
     <h1 className="title">Hello, Preact!</h1>
     <div className="tip">Edit src/components/Home.tsx and save to reload.</div>
-    <Link href="/about">to about</Link>
+    <p>
+      <Link href="/about">to about</Link>
+    </p>
+    <p>
+      <Link href="/users">to users</Link>
+    </p>
   </>
 )
